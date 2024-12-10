@@ -278,8 +278,8 @@
                         <div class="col-xxl-3 col-sm-6">
                             <div class="card">
                                 <div class="card-body">
-                                    <h4 class="mb-2">155+</h4>
-                                    <span class="text-gray-600">Completed Courses</span>
+                                    <h4 class="mb-2">10+</h4>
+                                    <span class="text-gray-600">Completed Task</span>
                                     <div class="flex-between gap-8 mt-16">
                                         <span class="flex-shrink-0 w-48 h-48 flex-center rounded-circle bg-main-600 text-white text-2xl"><i class="ph-fill ph-book-open"></i></span>
                                         <div id="complete-course" class="remove-tooltip-title rounded-tooltip-value"></div>
@@ -290,8 +290,8 @@
                         <div class="col-xxl-3 col-sm-6">
                             <div class="card">
                                 <div class="card-body">
-                                    <h4 class="mb-2">39+</h4>
-                                    <span class="text-gray-600">Earned Certificate</span>
+                                    <h4 class="mb-2">6+</h4>
+                                    <span class="text-gray-600">Task Not Started</span>
                                     <div class="flex-between gap-8 mt-16">
                                         <span class="flex-shrink-0 w-48 h-48 flex-center rounded-circle bg-main-two-600 text-white text-2xl"><i class="ph-fill ph-certificate"></i></span>
                                         <div id="earned-certificate" class="remove-tooltip-title rounded-tooltip-value"></div>
@@ -302,8 +302,8 @@
                         <div class="col-xxl-3 col-sm-6">
                             <div class="card">
                                 <div class="card-body">
-                                    <h4 class="mb-2">25+</h4>
-                                    <span class="text-gray-600">Course in Progress</span>
+                                    <h4 class="mb-2">13+</h4>
+                                    <span class="text-gray-600">Task in Progress</span>
                                     <div class="flex-between gap-8 mt-16">
                                         <span class="flex-shrink-0 w-48 h-48 flex-center rounded-circle bg-purple-600 text-white text-2xl"> <i class="ph-fill ph-graduation-cap"></i></span>
                                         <div id="course-progress" class="remove-tooltip-title rounded-tooltip-value"></div>
@@ -314,8 +314,8 @@
                         <div class="col-xxl-3 col-sm-6">
                             <div class="card">
                                 <div class="card-body">
-                                    <h4 class="mb-2">18k+</h4>
-                                    <span class="text-gray-600">Community Support</span>
+                                    <h4 class="mb-2">15+</h4>
+                                    <span class="text-gray-600">Reminder Bimbingan</span>
                                     <div class="flex-between gap-8 mt-16">
                                         <span class="flex-shrink-0 w-48 h-48 flex-center rounded-circle bg-warning-600 text-white text-2xl"><i class="ph-fill ph-users-three"></i></span>
                                         <div id="community-support" class="remove-tooltip-title rounded-tooltip-value"></div>
@@ -335,11 +335,11 @@
                                     <div class="flex-align flex-wrap gap-16">
                                         <div class="flex-align flex-wrap gap-8">
                                             <span class="w-8 h-8 rounded-circle bg-main-600"></span>
-                                            <span class="text-13 text-gray-600">Study</span>
+                                            <span class="text-13 text-gray-600">Task</span>
                                         </div>
                                         <div class="flex-align flex-wrap gap-8">
                                             <span class="w-8 h-8 rounded-circle bg-main-two-600"></span>
-                                            <span class="text-13 text-gray-600">Test</span>
+                                            <span class="text-13 text-gray-600">Hours</span>
                                         </div>
                                     </div>
                                     <select class="form-select form-control text-13 px-8 pe-24 py-8 rounded-8 w-auto">
