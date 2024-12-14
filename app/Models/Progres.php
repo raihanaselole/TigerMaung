@@ -1,27 +1,12 @@
 <?php
 
 namespace App\Models;
-
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
 
-
-class Progress extends Model
+class Progres extends Model
 {
     use HasFactory;
-
-    protected $fillable = [
-        'user_id',
-        'task_name',
-        'description',
-        'status',
-        'due_date',
-        'completed_at',
-    ];
-
-    // Relasi ke tabel users
-    public function user()
-    {
-        return $this->belongsTo(User::class);
-    }
+    protected $table = 'progress';
+    protected $fillable = ['task_name', 'description', 'status', 'due_date'];
 }

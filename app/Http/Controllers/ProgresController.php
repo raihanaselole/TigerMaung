@@ -1,81 +1,90 @@
 <?php
 
 namespace App\Http\Controllers;
-use Illuminate\Http\Request;
-use App\Models\Progress;
 
-class ProgressController extends Controller
+use Illuminate\Http\Request;
+use App\Models\Progres;
+
+class ProgresController extends Controller
 {
     /**
-     * Tampilkan semua progres pengguna tertentu.
+     * Display a listing of the resource.
      */
-    public function index(Request $request)
+    public function index()
     {
-        $progress = Progress::where('user_id', $request->user()->id)->get();
-        return response()->json($progress);
+        $progress = Progres::all();
+        return view('admin.progres.index', compact('progress'));
     }
 
     /**
-     * Simpan progres baru.
+     * Show the form for creating a new resource.
+     */
+    public function create()
+    {
+        return view('admin.progres.create');
+    }
+
+    /**
+     * Store a newly created resource in storage.
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'task_name' => 'required|string|max:255',
-            'description' => 'nullable|string',
+        // validasi form input
+        $validated = $request->validate([
+            'task_name' => 'required|string',
+            'description' => 'required|string',
             'status' => 'required|in:not started,in progress,completed',
-            'due_date' => 'required|date',
+            'duedate'=> 'required|date|after_or_equal:today'
         ]);
 
-        $progress = Progress::create([
-            'user_id' => $request->user()->id,
-            'task_name' => $request->task_name,
-            'description' => $request->description,
-            'status' => $request->status,
-            'due_date' => $request->due_date,
-        ]);
-
-        return response()->json(['message' => 'Progress created successfully.', 'data' => $progress], 201);
+        //$validated['user_id'] = auth()->id();
+        Progres::create($validated);
+        return redirect('dashboard/progres');
     }
 
     /**
-     * Tampilkan detail progres tertentu.
+     * Display the specified resource.
      */
-    public function show($id)
+    public function show(string $id)
     {
-        $progress = Progress::findOrFail($id);
-        return response()->json($progress);
+        $progress = Progres::find($id);
+        return view('admin.progres.show', compact('progress'));
     }
 
     /**
-     * Perbarui progres yang ada.
+     * Show the form for editing the specified resource.
      */
-    public function update(Request $request, $id)
+    public function edit(string $id)
     {
-        $request->validate([
-            'task_name' => 'nullable|string|max:255',
-            'description' => 'nullable|string',
-            'status' => 'nullable|in:not started,in progress,completed',
-            'due_date' => 'nullable|date',
+        $progress = Progres::find($id);
+        return view('admin.progres.edit', compact('progress'));
+    }
+
+    /**
+     * Update the specified resource in storage.
+     */
+    public function update(Request $request, string $id)
+    {
+        $validated = $request->validate([
+            'task_name' => 'required|string',
+            'description' => 'required|string',
+            'status' => 'required|in:not started,in progress,completed',
+            'duedate'=> 'required|date|after_or_equal:today'
         ]);
+        $progress = Progres::find($id);
+        $progress->update($validated);
 
-        $progress = Progress::findOrFail($id);
-
-        // Perbarui data
-        $progress->update($request->all());
-
-        return response()->json(['message' => 'Progress updated successfully.', 'data' => $progress]);
+        return redirect('dashboard/progres')->with('pesan','data berhasil diperbaharui');
     }
 
     /**
-     * Hapus progres.
+     * Remove the specified resource from storage.
      */
-    public function destroy($id)
+    public function destroy(string $id)
     {
-        $progress = Progress::findOrFail($id);
-
+        $progress = Progres::find($id);
         $progress->delete();
 
-        return response()->json(['message' => 'Progress deleted successfully.']);
+        return redirect('/dashboard/progres')->with('pesan','data berhasil dihapus');
     }
 }

@@ -1,80 +1,64 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use Illuminate\Http\Request;
-use App\Models\Reminder;
 
 class ReminderController extends Controller
 {
     /**
-     * Menampilkan daftar pengingat.
+     * Display a listing of the resource.
      */
     public function index()
     {
-        $reminders = Reminder::orderBy('reminder_date', 'asc')->get();
-        return view('reminders.index', compact('reminders'));
+        //
     }
 
     /**
-     * Menampilkan form untuk membuat pengingat baru.
+     * Show the form for creating a new resource.
      */
     public function create()
     {
-        return view('reminders.create');
+        //
     }
 
     /**
-     * Menyimpan pengingat baru ke database.
+     * Store a newly created resource in storage.
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'title' => 'required|string|max:255',
-            'reminder_date' => 'required|date',
-        ]);
-
-        Reminder::create([
-            'title' => $request->title,
-            'reminder_date' => $request->reminder_date,
-        ]);
-
-        return redirect()->route('reminders.index')->with('success', 'Reminder added successfully!');
+        //
     }
 
     /**
-     * Menampilkan form untuk mengedit pengingat.
+     * Display the specified resource.
      */
-    public function edit(Reminder $reminder)
+    public function show(string $id)
     {
-        return view('reminders.edit', compact('reminder'));
+        //
     }
 
     /**
-     * Memperbarui data pengingat di database.
+     * Show the form for editing the specified resource.
      */
-    public function update(Request $request, Reminder $reminder)
+    public function edit(string $id)
     {
-        $request->validate([
-            'title' => 'required|string|max:255',
-            'reminder_date' => 'required|date',
-        ]);
-
-        $reminder->update([
-            'title' => $request->title,
-            'reminder_date' => $request->reminder_date,
-            'is_completed' => $request->has('is_completed'),
-        ]);
-
-        return redirect()->route('reminders.index')->with('success', 'Reminder updated successfully!');
+        //
     }
 
     /**
-     * Menghapus pengingat dari database.
+     * Update the specified resource in storage.
      */
-    public function destroy(Reminder $reminder)
+    public function update(Request $request, string $id)
     {
-        $reminder->delete();
+        //
+    }
 
-        return redirect()->route('reminders.index')->with('success', 'Reminder deleted successfully!');
+    /**
+     * Remove the specified resource from storage.
+     */
+    public function destroy(string $id)
+    {
+        //
     }
 }

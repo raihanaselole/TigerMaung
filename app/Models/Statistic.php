@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Analisis extends Model
+class Statistic extends Model
 {
     //
 }
