@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Progres;
+use Illuminate\Support\Facades\Auth;
+use App\Models\Reminder;
 use Illuminate\Http\Request;
 
 class StatisticController extends Controller
@@ -11,7 +14,25 @@ class StatisticController extends Controller
      */
     public function index()
     {
-        //
+        // Ensure to get statistics based on the logged-in user
+        $userId = Auth::id();
+
+        // Count tasks by status for the logged-in user
+        $completedTasks = Progres::where('status', 'completed')
+                                  ->where('user_id', $userId)
+                                  ->count();
+
+        $notStartedTasks = Progres::where('status', 'not started')
+                                  ->where('user_id', $userId)
+                                  ->count();
+
+        $inProgressTasks = Progres::where('status', 'in progress')
+                                  ->where('user_id', $userId)
+                                  ->count();
+
+        return view('admin.statistik.index', compact(
+            'completedTasks', 'notStartedTasks', 'inProgressTasks'
+        ));
     }
 
     /**

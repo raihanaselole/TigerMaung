@@ -1,5 +1,15 @@
 <x-layout>
     <x-slot name='page_content'>
+        @if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
+
         <form class="forms-sample" action="{{ url('dashboard/progres/store') }}" method="POST">
             @csrf
             <div class="form-group row">
@@ -29,10 +39,9 @@
                 </div>
             </div>
             <div class="form-group row">
-                <label for="due_date" class="col-sm-4 col-form-label">Deskripsi</label>
+                <label for="due_date" class="col-sm-4 col-form-label">Tenggat Waktu</label>
                 <div class="col-sm-8">
-                    <input type="date" class="form-control" id="due_date" name="due_date"
-                        placeholder="Masukkan Deskripsi">
+                    <input type="date" class="form-control" id="due_date" name="due_date">
                 </div>
             </div>
             <div class="form-group row">

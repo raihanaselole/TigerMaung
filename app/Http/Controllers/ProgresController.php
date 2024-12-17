@@ -34,12 +34,14 @@ class ProgresController extends Controller
             'task_name' => 'required|string',
             'description' => 'required|string',
             'status' => 'required|in:not started,in progress,completed',
-            'duedate'=> 'required|date|after_or_equal:today'
+            'due_date'=> 'required|date'
         ]);
+        $validated['user_id'] = auth()->id();
 
         //$validated['user_id'] = auth()->id();
         Progres::create($validated);
-        return redirect('dashboard/progres');
+        return redirect('dashboard/progres')->with('pesan','Progres berhasil ditambahkan');
+        // return redirect('dashboard/progres');
     }
 
     /**
@@ -69,12 +71,12 @@ class ProgresController extends Controller
             'task_name' => 'required|string',
             'description' => 'required|string',
             'status' => 'required|in:not started,in progress,completed',
-            'duedate'=> 'required|date|after_or_equal:today'
+            'due_date'=> 'required|date'
         ]);
         $progress = Progres::find($id);
         $progress->update($validated);
 
-        return redirect('dashboard/progres')->with('pesan','data berhasil diperbaharui');
+        return redirect('dashboard/progres')->with('pesan','Progres berhasil diperbaharui');
     }
 
     /**
@@ -85,6 +87,6 @@ class ProgresController extends Controller
         $progress = Progres::find($id);
         $progress->delete();
 
-        return redirect('/dashboard/progres')->with('pesan','data berhasil dihapus');
+        return redirect('/dashboard/progres')->with('pesan','Progres berhasil dihapus');
     }
 }

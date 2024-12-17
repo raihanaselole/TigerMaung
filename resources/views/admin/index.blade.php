@@ -1,58 +1,58 @@
 <x-layout>
     <x-slot name='page_content'>
         <div class="row gy-4">
-                <div class="col-lg-9">
-                    <!-- Widgets Start -->
-                    <div class="row gy-4">
-                        <div class="col-xxl-3 col-sm-6">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h4 class="mb-2">10+</h4>
-                                    <span class="text-gray-600">Completed Task</span>
-                                    <div class="flex-between gap-8 mt-16">
-                                        <span class="flex-shrink-0 w-48 h-48 flex-center rounded-circle bg-main-600 text-white text-2xl"><i class="ph-fill ph-book-open"></i></span>
-                                        <div id="complete-course" class="remove-tooltip-title rounded-tooltip-value"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xxl-3 col-sm-6">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h4 class="mb-2">6+</h4>
-                                    <span class="text-gray-600">Task Not Started</span>
-                                    <div class="flex-between gap-8 mt-16">
-                                        <span class="flex-shrink-0 w-48 h-48 flex-center rounded-circle bg-main-two-600 text-white text-2xl"><i class="ph-fill ph-certificate"></i></span>
-                                        <div id="earned-certificate" class="remove-tooltip-title rounded-tooltip-value"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xxl-3 col-sm-6">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h4 class="mb-2">13+</h4>
-                                    <span class="text-gray-600">Task in Progress</span>
-                                    <div class="flex-between gap-8 mt-16">
-                                        <span class="flex-shrink-0 w-48 h-48 flex-center rounded-circle bg-purple-600 text-white text-2xl"> <i class="ph-fill ph-graduation-cap"></i></span>
-                                        <div id="course-progress" class="remove-tooltip-title rounded-tooltip-value"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xxl-3 col-sm-6">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h4 class="mb-2">15+</h4>
-                                    <span class="text-gray-600">Reminder Bimbingan</span>
-                                    <div class="flex-between gap-8 mt-16">
-                                        <span class="flex-shrink-0 w-48 h-48 flex-center rounded-circle bg-warning-600 text-white text-2xl"><i class="ph-fill ph-users-three"></i></span>
-                                        <div id="community-support" class="remove-tooltip-title rounded-tooltip-value"></div>
-                                    </div>
+            <div class="col-lg-9">
+                <!-- Widgets Start -->
+                <div class="row gy-4">
+                    <div class="col-xxl-3 col-sm-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="mb-2">{{ $completedTasks }}</h4>
+                                <span class="text-gray-600">Completed Task</span>
+                                <div class="flex-between gap-8 mt-16">
+                                    <span class="flex-shrink-0 w-48 h-48 flex-center rounded-circle bg-main-600 text-white text-2xl"><i class="ph-fill ph-book-open"></i></span>
+                                    <div id="complete-course" class="remove-tooltip-title rounded-tooltip-value"></div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <div class="col-xxl-3 col-sm-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="mb-2">{{ $notStartedTasks }}</h4>
+                                <span class="text-gray-600">Task Not Started</span>
+                                <div class="flex-between gap-8 mt-16">
+                                    <span class="flex-shrink-0 w-48 h-48 flex-center rounded-circle bg-main-two-600 text-white text-2xl"><i class="ph-fill ph-certificate"></i></span>
+                                    <div id="earned-certificate" class="remove-tooltip-title rounded-tooltip-value"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-3 col-sm-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="mb-2">{{ $inProgressTasks }}</h4>
+                                <span class="text-gray-600">Task in Progress</span>
+                                <div class="flex-between gap-8 mt-16">
+                                    <span class="flex-shrink-0 w-48 h-48 flex-center rounded-circle bg-purple-600 text-white text-2xl"> <i class="ph-fill ph-graduation-cap"></i></span>
+                                    <div id="course-progress" class="remove-tooltip-title rounded-tooltip-value"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-3 col-sm-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="mb-2">{{ $reminderCount }}</h4>
+                                <span class="text-gray-600">Reminder Bimbingan</span>
+                                <div class="flex-between gap-8 mt-16">
+                                    <span class="flex-shrink-0 w-48 h-48 flex-center rounded-circle bg-warning-600 text-white text-2xl"><i class="ph-fill ph-users-three"></i></span>
+                                    <div id="community-support" class="remove-tooltip-title rounded-tooltip-value"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                     <!-- Widgets End -->
 
                     <!-- Top Course Start -->

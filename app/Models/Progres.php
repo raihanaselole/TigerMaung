@@ -8,5 +8,5 @@ class Progres extends Model
 {
     use HasFactory;
     protected $table = 'progress';
-    protected $fillable = ['task_name', 'description', 'status', 'due_date'];
+    protected $fillable = ['user_id','task_name', 'description', 'status', 'due_date'];
 }

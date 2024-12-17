@@ -11,25 +11,25 @@
       <div class="p-20 pt-10">
           <ul class="sidebar-menu">
               <li class="sidebar-menu__item">
-                  <a href="students.html" class="sidebar-menu__link">
-                      <span class="icon"><i class="ph ph-users-three"></i></span>
+                  <a href="{{ url('dashboard') }}" class="sidebar-menu__link">
+                      <span class="icon"><i class="ph ph-squares-four"></i></span>
                       <span class="text">Dashboard</span>
                   </a>
               </li>
               <li class="sidebar-menu__item">
-                <a href="students.html" class="sidebar-menu__link">
-                    <span class="icon"><i class="ph ph-users-three"></i></span>
+                <a href="{{ url('dashboard/progres') }}" class="sidebar-menu__link">
+                    <span class="icon"><i class="ph ph-graduation-cap"></i></span>
                     <span class="text">Progres</span>
                 </a>
               </li>
               <li class="sidebar-menu__item">
-                  <a href="students.html" class="sidebar-menu__link">
+                  <a href="{{ url('dashboard/reminders') }}" class="sidebar-menu__link">
                       <span class="icon"><i class="ph ph-users-three"></i></span>
                       <span class="text">Reminder Bimbingan</span>
                   </a>
               </li>
               <li class="sidebar-menu__item">
-                  <a href="analytics.html" class="sidebar-menu__link">
+                  <a href="{{ url('dashboard/statistik') }}" class="sidebar-menu__link">
                       <span class="icon"><i class="ph ph-chart-bar"></i></span>
                       <span class="text">Statistik</span>
                   </a>

@@ -8,11 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Reminder extends Model
 {
     use HasFactory;
-
+    protected $table = 'reminders';
     protected $fillable = [
         'user_id',
         'title',
         'description',
-        'reminder_date',
+        'reminder_date'
     ];
 }

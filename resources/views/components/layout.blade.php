@@ -7,7 +7,7 @@
     <!-- Title -->
     <title> Edmate Learning Dashboard HTML Template</title>
     <!-- Favicon -->
-    <link rel="shortcut icon" href="{{ asset('admin/images/logo/favicon.png')}}">
+    <link rel="shortcut icon" href="{{ asset('admin/images/4.svg')}}">
     <!-- Bootstrap -->
     <link rel="stylesheet" href="{{ asset('admin/css/bootstrap.min.css')}}">
     <!-- file upload -->
@@ -55,7 +55,7 @@
         <!-- Jquery js -->
     <script src="{{ asset('admin/js/jquery-3.7.1.min.js')}}"></script>
     <!-- Bootstrap Bundle Js -->
-    <script src="{{ asset('admin/assets/js/boostrap.bundle.min.js')}}"></script>
+    <script src="{{ asset('admin/js/boostrap.bundle.min.js')}}"></script>
     <!-- Phosphor Js -->
     <script src="{{ asset('admin/js/phosphor-icon.js')}}"></script>
     <!-- file upload -->
@@ -81,6 +81,7 @@
     
     <!-- main js -->
     <script src="{{ asset('admin/js/main.js')}}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 
 

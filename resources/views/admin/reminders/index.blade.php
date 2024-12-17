@@ -8,12 +8,11 @@
                 </button>
             </div>
         @endif
-        <a href="{{ route('reminders.create') }}" class="btn btn-primary mb-2">+ Tambah Reminder</a>
+        <a href="{{ url('dashboard/reminders/create') }}" class="btn btn-primary mb-15">+ Tambah Reminder</a>
         <table class="table table-bordered">
             <tr class="table-success">
                 <th>ID</th>
                 <th>Title</th>
-                <th>Description</th>
                 <th>Reminder Date</th>
                 <th>Aksi</th>
             </tr>
@@ -21,12 +20,11 @@
             <tr>
                 <td>{{ $reminder->id }}</td>
                 <td>{{ $reminder->title }}</td>
-                <td>{{ $reminder->description }}</td>
                 <td>{{ $reminder->reminder_date }}</td>
                 <td>
-                    <a href="{{ route('reminders.show', $reminder->id) }}" class="btn btn-primary"><i class="far fa-eye"></i> Lihat</a> |
-                    <a href="{{ route('reminders.edit', $reminder->id) }}" class="btn btn-warning"><i class="far fa-edit"></i> Edit</a> |
-                    <form action="{{ route('reminders.destroy', $reminder->id) }}" method="POST" class="d-inline">
+                    <a href="{{ url('dashboard/reminders/show', $reminder->id) }}" class="btn btn-primary"><i class="far fa-eye"></i> Lihat</a> |
+                    <a href="{{ url('dashboard/reminders/edit', $reminder->id) }}" class="btn btn-warning"><i class="far fa-edit"></i> Edit</a> |
+                    <form action="{{ url('dashboard/reminders/destroy', $reminder->id) }}" method="POST" class="d-inline">
                         @csrf
                         @method('DELETE')
                         <button type="submit" class="btn btn-danger" onclick="return confirm('Apakah yakin ingin menghapus data?')">
