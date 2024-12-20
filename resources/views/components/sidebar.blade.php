@@ -35,44 +35,18 @@
                   </a>
               </li>
               <li class="sidebar-menu__item">
-                  <span class="text-gray-300 text-sm px-20 pt-20 fw-semibold border-top border-gray-100 d-block text-uppercase">Settings</span>
-              </li>
-              <li class="sidebar-menu__item">
-                  <a href="setting.html" class="sidebar-menu__link">
-                      <span class="icon"><i class="ph ph-gear"></i></span>
-                      <span class="text">Account Settings</span>
-                  </a>
-              </li>
-
-              <li class="sidebar-menu__item has-dropdown">
-                  <a href="javascript:void(0)" class="sidebar-menu__link">
-                      <span class="icon"><i class="ph ph-shield-check"></i></span>
-                      <span class="text">Authetication</span>
-                  </a>
-                  <!-- Submenu start -->
-                  <ul class="sidebar-submenu">
-                      <li class="sidebar-submenu__item">
-                          <a href="sign-in.html" class="sidebar-submenu__link">Sign In</a>
-                      </li>
-                      <li class="sidebar-submenu__item">
-                          <a href="sign-up.html" class="sidebar-submenu__link">Sign Up</a>
-                      </li>
-                      <li class="sidebar-submenu__item">
-                          <a href="forgot-password.html" class="sidebar-submenu__link">Forgot Password</a>
-                      </li>
-                      <li class="sidebar-submenu__item">
-                          <a href="reset-password.html" class="sidebar-submenu__link">Reset Password</a>
-                      </li>
-                      <li class="sidebar-submenu__item">
-                          <a href="verify-email.html" class="sidebar-submenu__link">Verify Email</a>
-                      </li>
-                      <li class="sidebar-submenu__item">
-                          <a href="two-step-verification.html" class="sidebar-submenu__link">Two Step Verification</a>
-                      </li>
-                  </ul>
-                  <!-- Submenu End -->
-              </li>
-              
+                <form action="{{ url('logout') }}" method="POST" class="sidebar-menu__link" 
+                      style="display: flex; align-items: center; gap: 10px; color: #dc3545; background-color: transparent; border: none; width: 100%; text-align: start; padding: 8px 12px; border-radius: 4px; transition: color 0.3s, background-color 0.3s; cursor: pointer;" 
+                      onsubmit="return confirmLogout();">
+                    @csrf
+                    <button type="submit" style="display: flex; align-items: center; gap: 10px; color: inherit; background-color: inherit; border: none; width: 100%; text-align: start; padding: 0;">
+                        <span class="icon"><i class="ph ph-sign-out"></i></span>
+                        <span class="text">Logout</span>
+                    </button>
+                </form>
+            </li>
+                         
+                  <!-- Submenu End --> 
           </ul>
       </div>
       <div class="p-20 pt-80">
@@ -89,4 +63,10 @@
       </div>
   </div>
 
-</aside> 
+</aside>
+
+<script>
+    function confirmLogout() {
+        return confirm("Apakah Anda yakin ingin keluar?");
+    }
+</script>

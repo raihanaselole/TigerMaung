@@ -13,22 +13,22 @@
             @csrf
             @method('put')
             <div class="form-group row">
-                <label for="task_name" class="col-sm-4 col-form-label">Masukkan Progress</label>
+                <label for="task_name" class="col-sm-4 col-form-label">Nama Progress</label>
                 <div class="col-sm-8">
                     <input type="text" class="form-control" id="task_name" name="task_name"
                         placeholder="Masukkan Masukkan Progress" value="{{ $progress->task_name }}">
                 </div>
             </div>
             
-            <div class="form-group row">
-                <label for="description" class="col-sm-4 col-form-label">description</label>
+            <div class="form-group row mt-15">
+                <label for="description" class="col-sm-4 col-form-label">Deskripsi</label>
                 <div class="col-sm-8">
                     <input type="text" class="form-control" id="description" name="description"
                         placeholder="Masukkan description" value="{{ $progress->description }}">
                 </div>
             </div>
-            <div class="form-group row">
-                <label for="status" class="col-sm-4 col-form-label">status</label>
+            <div class="form-group row mt-15">
+                <label for="status" class="col-sm-4 col-form-label">Status</label>
                 <div class="col-sm-8">
                     <select class="form-control" id="status" name="status">
                         <option disabled selected value="">Pilih Status</option>
@@ -39,15 +39,15 @@
                 </div>
             </div>
 
-            <div class="form-group row">
-                <label for="due_date" class="col-sm-4 col-form-label">due_date</label>
+            <div class="form-group row mt-15">
+                <label for="due_date" class="col-sm-4 col-form-label">Tenggat Waktu</label>
                 <div class="col-sm-8">
                     <input type="date" class="form-control" id="due_date" name="due_date"
                      value="{{ $progress->due_date }}">
                 </div>
             </div>
             
-            <div class="form-group row">
+            <div class="form-group row mt-15">
                 <div class="col-sm-4"></div>
                 <div class="col-sm-8">
                     <button type="submit" class="btn btn-primary">Simpan</button>

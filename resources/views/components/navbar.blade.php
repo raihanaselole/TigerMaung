@@ -89,15 +89,15 @@
                   </div>
                   <ul class="max-h-270 overflow-y-auto scroll-sm pe-4">
                       <li class="mb-4">
-                          <a href="pricing-plan.html" class="py-12 text-15 px-20 hover-bg-gray-50 text-gray-300 rounded-8 flex-align gap-8 fw-medium text-15">
+                          <a href="{{ url('dashboard/progres') }}" class="py-12 text-15 px-20 hover-bg-gray-50 text-gray-300 rounded-8 flex-align gap-8 fw-medium text-15">
                               <span class="text-2xl text-primary-600 d-flex"><i class="ph ph-chart-bar"></i></span>
-                              <span class="text">Upgrade Plan</span>
+                              <span class="text">Upgrade Progres</span>
                           </a>
                       </li>
                       <li class="mb-4">
-                          <a href="analytics.html" class="py-12 text-15 px-20 hover-bg-gray-50 text-gray-300 rounded-8 flex-align gap-8 fw-medium text-15">
+                          <a href="{{ url('dashboard/statistik') }}" class="py-12 text-15 px-20 hover-bg-gray-50 text-gray-300 rounded-8 flex-align gap-8 fw-medium text-15">
                               <span class="text-2xl text-primary-600 d-flex"><i class="ph ph-chart-line-up"></i></span>
-                              <span class="text">Daily Activity</span>
+                              <span class="text">Total Statistic</span>
                           </a>
                       </li>
                       <li class="pt-8 border-top border-gray-100">

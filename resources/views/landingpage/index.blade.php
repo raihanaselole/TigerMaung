@@ -160,8 +160,8 @@
                 <div class="swiper-wrapper">
                     <!--Start Single Swiper Slide-->
                     <div class="swiper-slide">
-                        <div class="shape1"><img src="{{ asset('landingpage/images/shapes/slider-v1-shape1.png')}}" alt="" /></div>
-                        <div class="shape2"><img src="{{ asset('landingpage/images/shapes/slider-v1-shape2.png')}}" alt="" /></div>
+                        <div class="shape1"></div>
+                        <div class="shape2"></div>
                         <div class="image-layer"
                             style="background-image: url({{ asset('landingpage/images/backgrounds/main-slider-v1-1.jpg);')}}"></div>
                         <!-- /.image-layer -->
@@ -184,7 +184,7 @@
                                     <a href="#" class="thm-btn">Start Now</a>
                                 </div>
                                 <div class="main-slider-one__img">
-                                    <img src="{{ asset('landingpage/images/resources/5.png')}}" style="width: 900px;" alt="" />
+                                    {{-- <img src="{{ asset('landingpage/images/logo/4.svg')}}" style="width: 800px;" alt="" /> --}}
                                 </div>
                             </div>
                         </div>
@@ -193,8 +193,8 @@
 
                     <!--Start Single Swiper Slide-->
                     <div class="swiper-slide">
-                        <div class="shape1"><img src="{{ asset('landingpage/images/shapes/slider-v1-shape1.png')}}" alt="" /></div>
-                        <div class="shape2"><img src="{{ asset('landingpage/images/shapes/slider-v1-shape2.png')}}" alt="" /></div>
+                        <div class="shape1"></div>
+                        <div class="shape2"></div>
                         <div class="image-layer"
                             style="background-image: url({{ asset('landingpage/images/backgrounds/main-slider-v1-1.jpg);')}}"></div>
                         <!-- /.image-layer -->
@@ -216,7 +216,7 @@
                                     <a href="#" class="thm-btn">Start Now</a>
                                 </div>
                                 <div class="main-slider-one__img">
-                                    <img src="{{ asset('landingpage/images/resources/5.png')}}" style="width: 900px;" alt="" />
+                                    {{-- <img src="{{ asset('landingpage/images/logo/4.svg')}}" style="width: 600px;" alt="" /> --}}
                                 </div>
                             </div>
                         </div>

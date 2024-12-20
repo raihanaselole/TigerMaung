@@ -9,20 +9,29 @@
             </div>
         @endif
         <a href="{{ url('dashboard/reminders/create') }}" class="btn btn-primary mb-15">+ Tambah Reminder</a>
-        <table class="table table-bordered">
-            <tr class="table-success">
-                <th>ID</th>
-                <th>Title</th>
-                <th>Reminder Date</th>
-                <th>Aksi</th>
-            </tr>
-            @foreach ($reminders as $reminder)
-            <tr>
-                <td>{{ $reminder->id }}</td>
-                <td>{{ $reminder->title }}</td>
-                <td>{{ $reminder->reminder_date }}</td>
-                <td>
-                    <a href="{{ url('dashboard/reminders/show', $reminder->id) }}" class="btn btn-primary"><i class="far fa-eye"></i> Lihat</a> |
+        <table id="studentTable" class="table table-striped">
+            <thead>
+                <tr>
+                    <th class="fixed-width">
+                    </th>
+                    <th class="h6 text-gray-300" style="text-align: center;">Nama Reminder</th>
+                    <th class="h6 text-gray-300" style="text-align: center;">Reminder Date</th>
+                    <th class="h6 text-gray-300" style="text-align: center;">Aksi</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach ($reminders as $reminder)
+                <tr>
+                    <td class="fixed-width">
+                    </td>
+                    <td style="text-align: center; vertical-align: middle;">
+                        <span class="h6 mb-0 fw-medium text-gray-300">{{ $reminder->title }}</span>
+                    </td>
+                    <td style="text-align: center; vertical-align: middle;">
+                        <span class="h6 mb-0 fw-medium text-gray-300">{{ $reminder->reminder_date }}</span>
+                    </td>
+                    <td style="text-align: center; vertical-align: middle;">
+                        <a href="{{ url('dashboard/reminders/show', $reminder->id) }}" class="btn btn-primary"><i class="far fa-eye"></i> Lihat</a> |
                     <a href="{{ url('dashboard/reminders/edit', $reminder->id) }}" class="btn btn-warning"><i class="far fa-edit"></i> Edit</a> |
                     <form action="{{ url('dashboard/reminders/destroy', $reminder->id) }}" method="POST" class="d-inline">
                         @csrf
@@ -31,9 +40,10 @@
                             <i class="far fa-trash-alt"></i> Hapus
                         </button>
                     </form>
-                </td>
-            </tr>
-            @endforeach
+                    </td>
+                </tr>
+                @endforeach
+            </tbody>
         </table>
     </x-slot>
 </x-layout>

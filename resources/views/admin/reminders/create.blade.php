@@ -13,27 +13,27 @@
         <form class="forms-sample" action="{{ url('dashboard/reminders/store') }}" method="POST">
             @csrf
             <div class="form-group row">
-                <label for="title" class="col-sm-4 col-form-label">Nama reminder</label>
+                <label for="title" class="col-sm-4 col-form-label">Nama Reminder</label>
                 <div class="col-sm-8">
                     <input type="text" class="form-control" id="title" name="title"
                         placeholder="Masukkan Nama reminder">
                 </div>
             </div>
             
-            <div class="form-group row">
+            <div class="form-group row mt-15">
                 <label for="description" class="col-sm-4 col-form-label">Deskripsi</label>
                 <div class="col-sm-8">
                     <input type="text" class="form-control" id="description" name="description"
                         placeholder="Masukkan Deskripsi">
                 </div>
             </div>
-            <div class="form-group row">
-                <label for="reminder_date" class="col-sm-4 col-form-label">Tanggal Reminder</label>
+            <div class="form-group row mt-15">
+                <label for="reminder_date" class="col-sm-4 col-form-label">Reminder Date</label>
                 <div class="col-sm-8">
                     <input type="datetime-local" class="form-control" id="reminder_date" name="reminder_date">
                 </div>
             </div>
-            <div class="form-group row">
+            <div class="form-group row mt-15">
                 <div class="col-sm-4"></div>
                 <div class="col-sm-8">
                     <button type="submit" class="btn btn-primary">Simpan</button>

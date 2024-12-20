@@ -20,14 +20,14 @@
                 </div>
             </div>
             
-            <div class="form-group row">
+            <div class="form-group row mt-15">
                 <label for="description" class="col-sm-4 col-form-label">Deskripsi</label>
                 <div class="col-sm-8">
                     <input type="text" class="form-control" id="description" name="description"
                         placeholder="Masukkan Deskripsi">
                 </div>
             </div>
-            <div class="form-group row">
+            <div class="form-group row mt-15">
                 <label for="status" class="col-sm-4 col-form-label">Status</label>
                 <div class="col-sm-8">
                     <select class="form-control" id="status" name="status">
@@ -38,13 +38,13 @@
                     </select>
                 </div>
             </div>
-            <div class="form-group row">
+            <div class="form-group row mt-15">
                 <label for="due_date" class="col-sm-4 col-form-label">Tenggat Waktu</label>
                 <div class="col-sm-8">
                     <input type="date" class="form-control" id="due_date" name="due_date">
                 </div>
             </div>
-            <div class="form-group row">
+            <div class="form-group row mt-15">
                 <div class="col-sm-4"></div>
                 <div class="col-sm-8">
                     <button type="submit" class="btn btn-primary">Simpan</button>
