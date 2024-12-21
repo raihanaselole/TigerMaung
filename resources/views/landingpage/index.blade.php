@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TUTU</title>
     <!-- favicons Icons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('landingpage/images/favicons/apple-touch-icon.png')}}" />
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('landingpage/images/favicons/favicon-32x32.png')}}" />
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('landingpage/images/favicons/favicon-16x16.png')}}" />
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('landingpage/images/logo/4.svg')}}" />
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('landingpage/images/logo/4.svg')}}" />
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('landingpage/images/logo/4.svg')}}" />
     <link rel="manifest" href="{{ asset('landingpage/images/favicons/site.webmanifest')}}" />
     <meta name="description" content="Crsine HTML Template For Car Services" />
 
@@ -45,7 +45,7 @@
     </div>
 
     <!-- /.preloader -->
-    <div class="page-wrapper">
+    <div class="page-wrapper" id="home">
 
         <header class="main-header main-header--one  clearfix">
             <div class="main-header--one__top clearfix">
@@ -53,7 +53,7 @@
                     <div class="main-header--one__top-inner clearfix">
                         <div class="main-header--one__top-left">
                             <div class="main-header--one__top-logo">
-                                <a href="index.html"><img src="{{ asset('landingpage/images/resources/5.png')}}" style="width: 200px;" alt="" /></a>
+                                <a href="#home"><img src="{{ asset('landingpage/images/resources/5.png')}}" style="width: 200px;" alt="" /></a>
                             </div>
                         </div>
 
@@ -104,7 +104,7 @@
                                 <div class="left">
                                     <ul class="main-menu__list">
                                         <li class="">
-                                            <a href="index.html">Home</a>
+                                            <a href="#home">Home</a>
                                         </li>
                                         <li><a href="#welcome">About</a></li>
                                    </ul>
@@ -475,7 +475,7 @@
                         <div class="col-xl-2 col-lg-4 col-md-4 wow animated fadeInUp" data-wow-delay="0.1s">
                             <div class="footer-widget__column footer-widget__about">
                                 <div class="footer-widget__about-logo">
-                                    <a href="index.html"><img src="{{ asset('landingpage/images/resources/5.png')}}" style="width: 180px;" alt=""></a>
+                                    <a href="#home"><img src="{{ asset('landingpage/images/logo/logo footer.png')}}" style="width: 180px;" alt=""></a>
                                 </div>
                             </div>
                         </div>
@@ -486,8 +486,8 @@
                         <div class="col-xl-3 col-lg-6 col-md-6 wow animated fadeInUp" data-wow-delay="0.7s">
                             <div class="footer-widget__column footer-widget__contact">
                                 <h3 class="footer-widget__title">Contact</h3>
-                                <p class="text">Srengseng Sawah, Depok</p>
-                                <p><a href="mailto:info@templatepath.com">tutuofficial@student.ac.id</a></p>
+                                <p class="text">Srengseng Sawah, Jakarta Selatan</p>
+                                <p><a href="mailto:info@templatepath.com" class="text">tutuofficial@student.ac.id</a></p>
                                 <p class="phone"><a href="tel:123456789">92 888 666 0000</a></p>
                             </div>
                         </div>

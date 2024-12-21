@@ -48,16 +48,16 @@
             height: 45px; /* Ketinggian seragam untuk semua input */
         }
         .btn-main {
-            background-color: #007bff;
+            background-color: #0BC2E2;
             color: #ffffff;
             border: none;
             height: 45px;
         }
         .btn-main:hover {
-            background-color: #0056b3;
+            background-color: #0BC2E2;
         }
         .text-main-600 {
-            color: #007bff;
+            color: #0BC2E2;
         }
         .social-buttons {
             display: flex;

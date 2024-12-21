@@ -444,7 +444,7 @@ ul {
 }
 
 .owl-carousel.owl-dot-type1 .owl-dots .owl-dot.active {
-    background: var(--thm-base);
+    background: #0BC2E2;
     outline: none;
 }
 
@@ -457,7 +457,7 @@ ul {
     display: inline-block;
     width: 45px;
     height: 45px;
-    background: var(--thm-base);
+    background: #0BC2E2;
     position: fixed;
     bottom: 40px;
     right: 40px;
@@ -1460,7 +1460,7 @@ ul {
 .mobile-nav__content .main-menu__list li a button {
     width: 28px;
     height: 28px;
-    background-color: var(--thm-base);
+    background-color: #0BC2E2;
     border: none;
     outline: none;
     color: #fff;
@@ -1552,14 +1552,14 @@ ul {
 }
 
 .mobile-nav__contact li a:hover {
-    color: var(--thm-base);
+    color: #0BC2E2;
 }
 
 .mobile-nav__contact li>i {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: var(--thm-base);
+    background-color: #0BC2E2;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1648,7 +1648,7 @@ ul {
     top: 0;
     right: -1px;
     border-radius: 0;
-    background-color: var(--thm-base);
+    background-color: #0BC2E2;
     border: none;
     transition: all 200ms linear;
     transition-delay: 0.1s;
@@ -1777,7 +1777,7 @@ ul {
     transform-origin: center;
     transform-style: preserve-3d;
     transition: all 0.4s cubic-bezier(0.62, 0.21, 0.45, 1.52);
-    background: var(--thm-base);
+    background: #0BC2E2;
 }
 
 .main-header--one__top-social-link li a:hover:before {
@@ -1852,7 +1852,7 @@ ul {
 }
 
 .main-header--one__top-contact-info-list-item .text p a:hover {
-    color: var(--thm-base);
+    color: #0BC2E2;
 }
 
 
@@ -1935,7 +1935,7 @@ ul {
 }
 
 .main-header--two__top-contact-info .text p a:hover {
-    color: var(--thm-base);
+    color: #0BC2E2;
 }
 
 .main-header--two__top-right {
@@ -1989,7 +1989,7 @@ ul {
 }
 
 .main-header--two__top-right-login-register ul li a:hover {
-    color: var(--thm-base);
+    color: #0BC2E2;
 }
 
 .main-header--two__top-right-social-link {
@@ -2124,7 +2124,7 @@ ul {
 }
 
 .stricky-header--two .main-menu__right-cart-box a:hover {
-    color: var(--thm-base);
+    color: #0BC2E2;
 }
 
 
@@ -2950,7 +2950,7 @@ ul {
     top: 30px;
     left: -20px;
     bottom: 30px;
-    background: var(--thm-base);
+    background: #0BC2E2;
     width: 40px;
     border-radius: 8px;
     content: "";
@@ -3223,7 +3223,7 @@ ul {
     line-height: 20px;
     font-weight: 700;
     text-transform: uppercase;
-    background: var(--thm-base);
+    background: #0BC2E2;
     margin: 0;
     border-radius: 8px;
     padding: 5px 10px 2px;
@@ -3816,7 +3816,7 @@ ul {
 }
 
 .testimonials-one__single-title {
-    color: var(--thm-base);
+    color: #0BC2E2;
     font-size: 18px;
     line-height: 28px;
     font-weight: 700;
@@ -3998,7 +3998,7 @@ ul {
 .why-choose-one__left-learning-box .icon {
     position: relative;
     display: block;
-    color: var(--thm-base);
+    color: #0BC2E2;
     transition: all 500ms ease;
 }
 
@@ -4052,7 +4052,7 @@ ul {
 }
 
 .why-choose-one__left-list-single .icon span::before {
-    color: var(--thm-base);
+    color: #0BC2E2;
     font-size: 20px;
     display: block;
     transition: color 500ms ease, transform 500ms ease;
@@ -4467,7 +4467,7 @@ ul {
     background-size: cover;
     background-repeat: no-repeat;
     z-index: 1;
-    background-color: var(--thm-black);
+    background-color: #0BC2E2;
     mix-blend-mode: luminosity;
     opacity: 0.15;
     position: absolute;
@@ -4479,7 +4479,7 @@ ul {
 
 .footer-one {
     position: relative;
-    background-color: var(--thm-black);
+    background-color: #0BC2E2;
 }
 
 
@@ -4604,7 +4604,7 @@ ul {
 }
 
 .footer-widget__contact .text {
-    color: #aeb2c2;
+    color: white;
     font-size: 15px;
     line-height: 25px;
     font-weight: 400;
@@ -4639,7 +4639,7 @@ ul {
 }
 
 .footer-widget__contact .phone a {
-    color: #aeb2c2;
+    color: white;
     transition: all 200ms linear;
     transition-delay: 0.1s;
 }
@@ -4675,10 +4675,10 @@ ul {
     display: inline-block;
     width: 55px;
     height: 55px;
-    background: #0d0f13;
+    background: white;
     border-radius: 50%;
     text-align: center;
-    color: #ffffff;
+    color: #0BC2E2;
     z-index: 1;
 }
 
@@ -4695,7 +4695,7 @@ ul {
     transform-origin: center;
     transform-style: preserve-3d;
     transition: all 0.4s cubic-bezier(0.62, 0.21, 0.45, 1.52);
-    background: var(--thm-base);
+    background: white;
 }
 
 .footer-widget__social-links-list li a:hover:before {
@@ -4724,7 +4724,7 @@ ul {
 }
 
 .footer-one__bottom-text p {
-    color: #aeb2c2;
+    color: white;
     font-size: 15px;
     line-height: 25px;
     font-weight: 400;
