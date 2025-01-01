@@ -43,13 +43,13 @@
                     <td style="text-align: center; vertical-align: middle;">
                         <a href="{{ url('dashboard/progres/show', $progres->id) }}" class="btn btn-primary"><i class="far fa-eye"></i> Lihat</a> |
                     <a href="{{ url('dashboard/progres/edit', $progres->id) }}" class="btn btn-warning"><i class="far fa-edit"></i> Edit</a> |
-                    <form class="forms-sample d-inline" action="{{ url('dashboard/progres/destroy', $progres->id) }}" method="POST">
+                    <form id="deleteForm-{{ $progres->id }}" class="d-inline" action="{{ url('dashboard/progres/destroy', $progres->id) }}" method="POST">
                         @csrf
                         @method('delete')
-                        <button type="submit" class="btn btn-danger" onclick="return confirm('Apakah yakin ingin menghapus data?')">
+                        <button type="button" class="btn btn-danger delete-btn" data-id="{{ $progres->id }}">
                             <i class="far fa-trash-alt"></i> Hapus
                         </button>
-                    </form>
+                    </form>                         
                     </td>
                 </tr>
                 @endforeach

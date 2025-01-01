@@ -12,7 +12,7 @@ class ProgresController extends Controller
      */
     public function index()
     {
-        $progress = Progres::all();
+        $progress = Progres::where('user_id', auth()->id())->get();
         return view('admin.progres.index', compact('progress'));
     }
 

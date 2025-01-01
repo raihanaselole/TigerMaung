@@ -12,7 +12,7 @@ class ReminderController extends Controller
 {
     public function index()
     {
-        $reminders = Reminder::all();
+        $reminders = Reminder::where('user_id', auth()->id())->get();
         return view('admin.reminders.index', compact('reminders'));
     }
 
@@ -29,42 +29,35 @@ class ReminderController extends Controller
             'reminder_date' => 'required|date',
         ]);
         $validated['user_id'] = auth()->id();
-
-        $reminder = Reminder::create([
-            'user_id' => auth()->id(),  // Assuming user_id is being tracked
-            'title' => $request->title,
-            'description' => $request->description,
-            'reminder_date' => $request->reminder_date,
-            // Add other necessary fields
-        ]);
-
-            // Format reminder_date to 'Y-m-d H:i'
+    
+        // Hanya perlu memanggil create sekali
+        $reminder = Reminder::create($validated);
+    
+        // Format reminder_date to 'Y-m-d H:i'
         $formattedDate = Carbon::parse($reminder->reminder_date)->format('Y-m-d H:i');
-
+    
         // Create the notification message
         $notification = [
             'message' => "Reminder: Bimbingan {$reminder->title} pada tanggal {$formattedDate}.",
             'title' => $reminder->title,
             'reminder_date' => $formattedDate,
         ];
-
+    
         // Get existing notifications from the cache
         $notifications = Cache::get('notifications', []);
-
+    
         // Add new notification to the list
         $notifications[] = $notification;
-
+    
         // Limit the number of notifications to 5
         if (count($notifications) > 5) {
             array_shift($notifications); // Remove the oldest notification
         }
-
+    
         // Store the notifications back into cache
         Cache::forever('notifications', $notifications);
-        
-        Reminder::create($validated);
+    
         return redirect('dashboard/reminders')->with('pesan','Reminder berhasil ditambahkan');
-        // return redirect('dashboard/reminders');
         
     }
 

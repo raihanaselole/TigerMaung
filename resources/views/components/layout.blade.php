@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Title -->
-    <title> Edmate Learning Dashboard HTML Template</title>
+    <title> TUTU </title>
     <!-- Favicon -->
     <link rel="shortcut icon" href="{{ asset('admin/images/4.svg')}}">
     <!-- Bootstrap -->
@@ -30,6 +30,8 @@
     <link rel="stylesheet" href="{{ asset('admin/css/jquery-jvectormap-2.0.5.css')}}">
     <!-- Main css -->
     <link rel="stylesheet" href="{{ asset('admin/css/main.css')}}">
+    <link rel="stylesheet" href="{{ asset('admin/css/alert.css')}}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 </head> 
 <body>
     
@@ -81,7 +83,9 @@
     
     <!-- main js -->
     <script src="{{ asset('admin/js/main.js')}}"></script>
+    <script src="{{ asset('admin/js/alert.js')}}"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 
 

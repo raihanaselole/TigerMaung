@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ReminderController;
 use App\Http\Controllers\StatisticController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Models\Reminder;
 
@@ -17,6 +18,11 @@ Route::get('/', function () {
 Route::get('/landingpage/login', function () {
     return view('/landingpage/login');
 })->name('login');
+
+Route::get('/users', [UserController::class, 'index'])->name('users.index');
+// Route untuk detail pengguna
+Route::get('/users/show/{id}', [UserController::class, 'show'])->name('users.show');
+
 
 // Route::get('/landingpage/register', function () {
 //     return view('/landingpage/register');

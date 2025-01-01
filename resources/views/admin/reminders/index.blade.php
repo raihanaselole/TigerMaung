@@ -33,10 +33,10 @@
                     <td style="text-align: center; vertical-align: middle;">
                         <a href="{{ url('dashboard/reminders/show', $reminder->id) }}" class="btn btn-primary"><i class="far fa-eye"></i> Lihat</a> |
                     <a href="{{ url('dashboard/reminders/edit', $reminder->id) }}" class="btn btn-warning"><i class="far fa-edit"></i> Edit</a> |
-                    <form action="{{ url('dashboard/reminders/destroy', $reminder->id) }}" method="POST" class="d-inline">
+                    <form id="deleteForm-{{ $reminder->id }}" class="d-inline" action="{{ url('dashboard/reminders/destroy', $reminder->id) }}" method="POST">
                         @csrf
-                        @method('DELETE')
-                        <button type="submit" class="btn btn-danger" onclick="return confirm('Apakah yakin ingin menghapus data?')">
+                        @method('delete')
+                        <button type="button" class="btn btn-danger delete-btn" data-id="{{ $reminder->id }}">
                             <i class="far fa-trash-alt"></i> Hapus
                         </button>
                     </form>
