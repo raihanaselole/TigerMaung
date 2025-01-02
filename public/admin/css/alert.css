@@ -17,18 +17,19 @@
 
     /* Tombol OK */
     .custom-confirm-button {
-        background-color: #4caf50 !important; /* Warna hijau */
+        background-color: #6c7b95 !important; /* Warna hijau */
         color: white !important; /* Teks putih */
-        border: none !important;
+        border: 3px solid #ffffff !important;
         border-radius: 5px;
         padding: 10px 20px;
     }
 
     /* Tombol Cancel */
     .custom-cancel-button {
-        background-color: #f44336 !important; /* Warna merah */
+        background-color: #6c7b95 !important; /* Warna merah */
         color: white !important; /* Teks putih */
-        border: none !important;
+        border: 3px solid #ffffff !important;
         border-radius: 5px;
         padding: 10px 20px;
+        margin-left: 10px;
     }

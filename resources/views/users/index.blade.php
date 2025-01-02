@@ -30,7 +30,7 @@
     <link rel="stylesheet" href="{{ asset('admin/css/jquery-jvectormap-2.0.5.css')}}">
     <!-- Main css -->
     <link rel="stylesheet" href="{{ asset('admin/css/main.css')}}">
-    <link rel="stylesheet" href="{{ asset('admin/css/alert.css')}}">
+    <link rel="stylesheet" href="{{ asset('admin/css/alertadmin.css')}}">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 </head> 
 <body>
@@ -252,8 +252,7 @@
     <table id="studentTable" class="table table-striped">
         <thead>
             <tr>
-                <th class="fixed-width">
-                </th>
+                <th class="fixed-width"></th>
                 <th class="h6 text-gray-300">Nama Pengguna</th>
                 <th class="h6 text-gray-300" style="text-align: center;">Email</th>
                 <th class="h6 text-gray-300" style="text-align: center;">Aksi</th>
@@ -261,29 +260,28 @@
         </thead>
         <tbody>
             @foreach ($users as $user)
-            <tr>
-                <td class="fixed-width">
-                </td>
-                <td style="text-align: center; vertical-align: middle;">
-                    <div class="flex-align gap-8">
-                        <img src="{{ asset('admin/images/6.svg')}}" alt="" class="w-40 h-40 rounded-circle">
-                        <span class="h6 mb-0 fw-medium text-gray-300">{{ $user->name }}</span>
-                    </div>
-                </td>
-                <td style="text-align: center; vertical-align: middle;">
-                    <span class="h6 mb-0 fw-medium text-gray-300">{{ $user->email }}</span>
-                </td>
-                <td style="text-align: center; vertical-align: middle;">
-                    <a href="{{ url('users/show', $user->id) }}" class="btn btn-primary"><i class="far fa-eye"></i> Lihat</a> |
-                <form action="{{ url('users/destroy', $user->id) }}" method="POST" class="d-inline">
-                    @csrf
-                    @method('DELETE')
-                    <button type="submit" class="btn btn-danger" onclick="return confirm('Apakah yakin ingin menghapus data?')">
-                        <i class="far fa-trash-alt"></i> Hapus
-                    </button>
-                </form>
-                </td>
-            </tr>
+                <tr>
+                    <td class="fixed-width"></td>
+                    <td style="text-align: center; vertical-align: middle;">
+                        <div class="flex-align gap-8">
+                            <img src="{{ asset('admin/images/6.svg')}}" alt="" class="w-40 h-40 rounded-circle">
+                            <span class="h6 mb-0 fw-medium text-gray-300">{{ $user->name }}</span>
+                        </div>
+                    </td>
+                    <td style="text-align: center; vertical-align: middle;">
+                        <span class="h6 mb-0 fw-medium text-gray-300">{{ $user->email }}</span>
+                    </td>
+                    <td style="text-align: center; vertical-align: middle;">
+                        <a href="{{ url('users/show', $user->id) }}" class="btn btn-primary"><i class="far fa-eye"></i> Lihat</a> |
+                        <form action="{{ url('users/destroy', $user->id) }}" method="POST" class="d-inline delete-form">
+                            @csrf
+                            @method('DELETE')
+                            <button type="button" class="btn btn-danger btn-delete">
+                                <i class="far fa-trash-alt"></i> Hapus
+                            </button>
+                        </form>
+                    </td>
+                </tr>
             @endforeach
         </tbody>
     </table>
@@ -332,7 +330,8 @@
     
     <!-- main js -->
     <script src="{{ asset('admin/js/main.js')}}"></script>
-    <script src="{{ asset('admin/js/alert.js')}}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="{{ asset('admin/js/alertadmin.js')}}"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>

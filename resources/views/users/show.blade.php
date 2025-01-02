@@ -30,6 +30,8 @@
     <link rel="stylesheet" href="{{ asset('admin/css/jquery-jvectormap-2.0.5.css')}}">
     <!-- Main css -->
     <link rel="stylesheet" href="{{ asset('admin/css/main.css')}}">
+    <link rel="stylesheet" href="{{ asset('admin/css/alertadmin.css')}}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 </head>
 <body>
     
@@ -278,12 +280,12 @@
                 <!-- Tombol Kembali -->
                 <div class="text-center mt-4 mb-10">
                     <a href="{{ url('/users') }}" class="btn btn-primary">Kembali</a>
-                    <form action="{{ url('users/destroy', $users->id) }}" method="POST" class="d-inline">
+                    <form action="{{ url('users/destroy', $users->id) }}" method="POST" class="d-inline delete-form">
                         @csrf
                         @method('DELETE')
-                        <button type="submit" class="btn btn-danger m-10" onclick="return confirm('Apakah yakin ingin menghapus data?')">
-                    <i class="far fa-trash-alt"></i> Hapus
-                </button>
+                        <button type="button" class="btn btn-danger btn-delete">
+                            <i class="far fa-trash-alt"></i> Hapus
+                        </button>
                 </div>
             </div>
         </div>
@@ -335,6 +337,8 @@
     
     <!-- main js -->
     <script src="{{ asset('admin/js/main.js')}}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="{{ asset('admin/js/alertadmin.js')}}"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
         function confirmLogout() {
